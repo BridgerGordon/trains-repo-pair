@@ -1,0 +1,21 @@
+---
+title: "trains_data"
+author: "Bridger Gordon"
+date: "10/22/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+
+
+```{r}
+dir.create("raw-data")
+download.file("https://piazza.com/redirect/s3?bucket=uploads&prefix=attach%2Fjzf5m8vslhy1hd%2Fjkjten94fm93ti%2Fk21uxtzailqc%2Ftrain.csv", destfile = "raw-data/trains.csv")
+read.csv("raw-data/trains.csv")
+
+```
+
